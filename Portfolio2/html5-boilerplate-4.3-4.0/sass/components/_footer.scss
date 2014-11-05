@@ -1,0 +1,64 @@
+.about {
+
+  list-style-type: none;
+  clear: both;
+  padding: 20px;
+  background: #206191;
+  border-top: 5px solid #0C4B7A;
+
+
+}
+
+.comparibles {
+
+  padding: 20px;
+  border-top: 5px solid #0C4B7A;
+  background: #4A99D4;
+
+}
+
+.personas {
+  padding: 20px;
+  background: #206191;
+}
+
+
+.gallery {
+  elements: block;
+  height: 500px;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+@mixin single-text-shadow($hoff: false, $voff: false, $blur: false, $spread: false, $color: false) {
+
+  @if type-of($hoff) == color {
+    $temp-color: $hoff;
+    $hoff: $voff;
+    $voff: $blur;
+    $blur: $spread;
+    $spread: $color;
+    $color: $temp-color;
+  }
+
+  $hoff: if($hoff, $hoff, $default-text-shadow-h-offset);
+  $voff: if($voff, $voff, $default-text-shadow-v-offset);
+  $blur: if($blur, $blur, $default-text-shadow-blur);
+  $spread: if($spread, $spread, $default-text-shadow-spread);
+  $color: if($color, $color, $default-text-shadow-color);
+  
+  @if $color == none or $hoff == none {
+    @include text-shadow(none);
+  }
+  @else {
+    @include text-shadow(compact($hoff $voff $blur $spread $color));
+  }
+}
