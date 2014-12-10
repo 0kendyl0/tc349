@@ -1,0 +1,43 @@
+.about {
+
+  list-style-type: none;
+  clear: both;
+  padding: 20px;
+  background: #C9FFC2;
+  border-top: 5px solid #158207;
+  color: #158207;
+
+
+}
+
+.comparibles {
+
+  padding: 20px;
+  border-top: 5px solid #158207;
+  background: #C9FFC2;
+  color: #158207;
+
+}
+
+.personas {
+  padding: 20px;
+  background: #C9FFC2;
+  color: #158207;
+}
+
+
+.gallery {
+  elements: block;
+  height: 500px;
+  padding-top: 20px;
+  padding-right: 20px;
+  background: #C9FFC2;
+}
+
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
